@@ -1,0 +1,31 @@
+[package]
+name = "bt2x-server"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bt2x-common = { path = "../bt2x-common" }
+sigstore = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+futures = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+oci-distribution = { workspace = true, features = ["rustls-tls"] }
+url = { workspace = true }
+tracing-subscriber = { workspace = true, features = [
+    "fmt",
+    "std",
+    "env-filter",
+] }
+tracing = { workspace = true }
+tracing-core = { workspace = true }
+humantime = { workspace = true }
+serde = { workspace = true }
+anyhow = { workspace = true }
+serde_yaml = { workspace = true }
+serde_json = { workspace = true }
+base64 = { workspace = true }
+rustls-pki-types = { workspace = true }
+rustls-pemfile = { workspace = true }

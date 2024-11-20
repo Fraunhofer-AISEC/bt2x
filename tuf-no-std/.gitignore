@@ -1,0 +1,8 @@
+/target
+/Cargo.lock
+/out/targets/ctlog.pub
+/out/targets/rekor.pub
+/out/1.root.der
+/out/1.snapshot.der
+/out/1.targets.der
+/out/1.timestamp.der

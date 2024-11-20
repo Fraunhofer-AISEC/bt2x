@@ -1,0 +1,9 @@
+key_config:
+  !keys
+  rekor_key: "/etc/monitor/rekor_key.pub"
+  fulcio_cert: ""
+  ctlog_key: ""
+urls:
+  rekor: http://rekor:3000
+  fulcio: http://fulcio:5555
+  oidc_issuer: http://dex-idp:8888/

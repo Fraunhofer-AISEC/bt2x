@@ -1,0 +1,2 @@
+[submodule "sigstore-rs/"]
+	branch = development

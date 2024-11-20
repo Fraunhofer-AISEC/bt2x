@@ -1,0 +1,36 @@
+[package]
+name = "bt2x-ota-common"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+default = ["tracing"]
+defmt = ["dep:defmt", "embedded-io-async/defmt-03"]
+tracing = ["dep:tracing"]
+log = ["dep:log"]
+mock_flash = []
+
+[dependencies]
+embedded-io-async = { workspace = true, features = [] }
+embassy-net = { workspace = true, features = ["tcp", "udp", "dhcpv4", "medium-ethernet"] }
+embassy-time = { workspace = true, features = [] }
+tuf-no-std = { path = "../../tuf-no-std/tuf-no-std", default-features = false, features = [
+    "der",
+    "verify",
+    "ecdsa",
+    "async",
+] }
+defmt = { workspace = true, features = [], optional = true }
+bitfield = { workspace = true, features = [] }
+tracing = { workspace = true, default-features = false, optional = true, features = [] }
+log = { workspace = true, default-features = false, optional = true, features = ["serde"] }
+embedded-storage = { workspace = true }
+sha2 = { workspace = true, default-features = false, features = [] }
+
+[dev-dependencies]
+pipe = { workspace = true }
+embedded-io-async = { workspace = true, features = ["std"] }
+tokio = { workspace = true, features = ["full"] }
+tempfile = { workspace = true }
+

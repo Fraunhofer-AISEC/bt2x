@@ -1,0 +1,88 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="JuEx3VDxohhKdRS4J8Q9">
+    <mxGraphModel dx="1583" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="190" width="350" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="530" width="320" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="220" width="320" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-1" value="rekor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-2" value="Fulcio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-3" value="CT Log" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="645" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-4" value="dex-idp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-5" value="BT²X Audit Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-7" value="BT²X OTA Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-8" value="BT²X Monitor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-9" value="ID Provider&lt;br&gt;(e.g. GitHub)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-10" value="ctfe-init" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="750" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-12" value="ct-trillian-log-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="610" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-13" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;ct-trillian-log-signer&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="680" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-14" value="bt-trillian-log-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="300" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-15" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;bt-trillian-log-signer&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="370" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-16" value="redis-server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="230" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-18" value="ct-mysql" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="540" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-19" value="bt-mysql" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-48" y="440" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-22" value="Rekor" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-23" value="CT Log" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="530" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-24" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="160" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-26" value="Sigstore" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="190" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-27" value="BT²X" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="190" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="910" width="490" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="VWizk5HHo87OJSUjZ4Rr-29" value="OIDC&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="990" width="60" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

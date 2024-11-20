@@ -1,0 +1,9 @@
+{
+  "OIDCIssuers": {
+    "http://dex-idp:8888/": {
+      "IssuerURL": "http://dex-idp:8888/",
+      "ClientID": "sigstore",
+      "Type": "email"
+    }
+  }
+}

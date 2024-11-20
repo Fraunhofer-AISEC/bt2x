@@ -1,0 +1,61 @@
+[package]
+name = "tuf-no-std-der"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+
+[features]
+default = []
+sign = []
+verify = []
+rsa = ["dep:rsa"]
+ecdsa = ["dep:p256"]
+ed25519 = ["dep:ed25519", "dep:ed25519-dalek"]
+dilithium3 = [
+#    "dep:oqs"
+]
+composite = []
+
+[dependencies]
+tuf-no-std-common = { path = "../tuf-no-std-common" }
+serde = { workspace = true, features = ["derive"] }
+# time = { version = "0.3", default-features = false, features = [
+#     "serde",
+#     "parsing",
+# ] }
+# semver = { version = "1.0", default-features = false, features = ["serde"] }
+serde-json-core = { workspace = true }
+anyhow = { workspace = true, features = [] }
+
+either = { workspace = true }
+signature = { workspace = true, features = [] }
+p256 = { workspace = true, features = ["ecdsa", "arithmetic"], optional = true }
+ed25519 = { workspace = true, optional = true }
+ed25519-dalek = { workspace = true, features = ["pkcs8"], optional = true }
+rsa = { workspace = true, features = ["sha2"], optional = true }
+# oqs = { workspace = true, features = ["sigs", "non_portable"], optional = true }
+pem-rfc7468 = { workspace = true, features = [] }
+hex = { workspace = true, features = [] }
+sha2 = { workspace = true, features = [] }
+
+spki = { workspace = true, features = ["fingerprint"] }
+const-oid = { workspace = true, features = ["db"] }
+der = { workspace = true, features = ["oid", "derive"] }
+zeroize = { workspace = true, features = [] }
+hash32 = { workspace = true }
+
+
+[dev-dependencies]
+serde_json = { workspace = true }
+postcard = { workspace = true }
+olpc-cjson = { workspace = true }
+rand_core = { workspace = true, features = ["getrandom"] }
+p256 = { workspace = true, features = ["ecdsa", "arithmetic", "pem"] }
+hex-literal = { workspace = true }
+anyhow = { workspace = true }
+ring = { workspace = true }
+untrusted = { workspace = true }
+tough = { workspace = true }
+rand = { workspace = true }
+ed25519-dalek = { workspace = true, features = ["rand_core", "alloc", "pkcs8"] }

@@ -1,0 +1,37 @@
+[package]
+name = "bt2x-embassy-std"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embassy-sync = { version = "0.6.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180", features = ["log"] }
+embassy-executor = { version = "0.5.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180", features = ["task-arena-size-1048576", "arch-std", "executor-thread", "log", "integrated-timers"] }
+embassy-time = { version = "0.3.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180", features = ["log", "std", ] }
+embassy-net = { version = "0.4.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180", features = ["std", "log", "medium-ethernet", "medium-ip", "tcp", "udp", "dns", "dhcpv4", "proto-ipv6"] }
+embassy-net-tuntap = { version = "0.1.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180" }
+embassy-net-ppp = { version = "0.1.0", git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180", features = ["log"] }
+embedded-io-async = { version = "0.6.1" }
+embedded-io-adapters = { version = "0.6.1", features = ["futures-03"] }
+critical-section = { version = "1.1", features = ["std"] }
+
+async-io = "1.6.0"
+env_logger = "0.9.0"
+futures = { version = "0.3.17" }
+log = "0.4.14"
+nix = "0.26.2"
+clap = { version = "3.0.0-beta.5", features = ["derive"] }
+rand_core = { version = "0.6.3", features = ["std"] }
+heapless = { version = "0.8", default-features = false }
+static_cell = "2"
+bt2x-embedded = { path = "../bt2x/bt2x-embedded" }
+bt2x-ota-common = { path = "../bt2x/bt2x-ota-common", features = ["log", "mock_flash"], default-features = false }
+tuf-no-std = { path = "../tuf-no-std/tuf-no-std", default-features = false, features = [
+    "der",
+    "ed25519",
+    "verify",
+    "ecdsa",
+    "async",
+] }

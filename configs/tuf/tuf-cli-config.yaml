@@ -1,0 +1,34 @@
+out: "./build"
+roles:
+  root:
+    keys:
+      - kind: ecdsa
+      - kind: ecdsa
+      - kind: ecdsa
+    threshold: 2
+    version: 1
+  timestamp:
+    keys:
+      - kind: ecdsa
+    threshold: 1
+    version: 1
+  snapshot:
+    keys:
+      - kind: ecdsa
+    threshold: 1
+    version: 1
+  targets:
+    keys:
+      - kind: ecdsa
+    threshold: 1
+    version: 1
+targets:
+  rekor:
+    name: "rekor.pub"
+    filepath: "configs/sigstore/rekor/rekor_pub_key.pem"
+  fulcio:
+    name: "fulcio.crt.pem"
+    filepath: "configs/sigstore/fulcio/config/fulcio.pem"
+  ctlog:
+    name: "ctlog.pub"
+    filepath: "configs/sigstore/fulcio/ctfe-init/config/pubkey.pem"

@@ -1,0 +1,42 @@
+[package]
+name = "bt2x-embedded"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[lib]
+# crate-type = ["dylib", "staticlib"]
+
+[features]
+default = ["no_std"]
+no_std = []
+
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+# serde_with = { path = "../vendor/serde_with/serde_with", version = "2.2", default-features = false, features = [
+#     "hex",
+#     "base64",
+#     "macros",
+#     "alloc",
+# ] }
+#heapless = "0.7"
+serde-json-core = { workspace = true }
+base64 = { workspace = true, features = [] }
+hex = { workspace = true, features = ["serde"] }
+
+sha2 = { workspace = true, features = [] }
+der = { workspace = true, features = [] }
+signature = { workspace = true, features = [] }
+ecdsa = { workspace = true, features = ["der", "verifying", "arithmetic", "pkcs8"] }
+spki = { workspace = true, features = [] }
+pkcs8 = { workspace = true, features = [] }
+p256 = { workspace = true, features = ["ecdsa", "ecdsa-core", "pem"] }
+x509-cert = { workspace = true, features = [] }
+pem-rfc7468 = { workspace = true, features = [] }
+
+base64ct = { workspace = true, features = [] }
+[dev-dependencies]
+serde_json = { workspace = true, features = ["alloc"] }
+postcard = { workspace = true, features = ["alloc"] }
+dhat = { workspace = true }

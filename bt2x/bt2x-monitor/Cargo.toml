@@ -1,0 +1,31 @@
+[package]
+name = "bt2x-monitor"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { workspace = true, features = ["full"] }
+axum = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+crossbeam = { workspace = true }
+tracing = { workspace = true }
+tracing-core = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["fmt", "std", "env-filter"] }
+url = { workspace = true, features = ["serde"] }
+uuid = { workspace = true, features = ["v4", "fast-rng", "serde"] }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { workspace = true }
+sigstore = { workspace = true }
+bt2x-common = { path = "../bt2x-common" }
+base64 = { workspace = true }
+futures = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+humantime = { workspace = true }
+serde_yaml = { workspace = true }
+
+[dev-dependencies]
+hex-literal = { workspace = true }

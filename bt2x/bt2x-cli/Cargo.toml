@@ -1,0 +1,29 @@
+[package]
+name = "bt2x-cli"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { workspace = true, features = ["derive"] }
+oci-distribution = { workspace = true, features = ["rustls-tls"] }
+url = { workspace = true }
+tracing = { workspace = true }
+tracing-core = { workspace = true }
+tracing-subscriber = { workspace = true, features = [
+    "fmt",
+    "std",
+    "env-filter",
+] }
+tokio = { workspace = true, features = ["rt-multi-thread"] }
+sigstore = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+olpc-cjson = { workspace = true }
+sha2 = { workspace = true, features = ["oid"] }
+base64 = { workspace = true }
+hex = { workspace = true }
+bt2x-common = { path = "../bt2x-common" }
+itertools = { workspace = true }

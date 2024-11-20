@@ -1,0 +1,3 @@
+fill this file with random bytes as needed
+e.g. with:
+dd if=/dev/urandom of=random-bytes bs=64K count=4

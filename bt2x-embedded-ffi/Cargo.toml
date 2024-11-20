@@ -1,0 +1,48 @@
+[package]
+name = "bt2x-embedded-ffi"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[profile.dev]
+panic = "abort"
+
+# cargo build/run --release
+[profile.release]
+panic = "abort"
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = "z"
+overflow-checks = false
+strip = "symbols"
+
+
+# do not optimize proc-macro crates = faster builds from scratch
+[profile.dev.build-override]
+codegen-units = 8
+debug = false
+debug-assertions = false
+opt-level = 0
+overflow-checks = false
+
+[profile.release.build-override]
+codegen-units = 8
+debug = false
+debug-assertions = false
+opt-level = 0
+overflow-checks = false
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+bt2x-embedded = { path = "../bt2x/bt2x-embedded", features = ["no_std"] }
+panic-halt = "0.2.0"
+embedded-alloc = "0.5.0"
+heapless = { version = "0.8" }
+
+[build-dependencies]
+cbindgen = "0.24.0"

@@ -1,0 +1,1 @@
+{"start_time":4426389,"end_time":20160179,"binary_size":434668,"fetch_target_files":{"secs":0,"nanos":80266000},"update_repo":{"secs":3,"nanos":810441000},"fetch_signature":{"secs":0,"nanos":24482000},"fetch_binary":{"secs":3,"nanos":296001000},"verify_binary":{"secs":2,"nanos":917296000},"verify_binary_naive":{"secs":0,"nanos":959284000}}

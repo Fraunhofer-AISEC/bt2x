@@ -1,0 +1,17 @@
+[package]
+name = "bt2x-ota"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { workspace = true, features = ["derive"] }
+bt2x-ota-common = { path = "../bt2x-ota-common", default-features = false, features = ["tracing"] }
+tokio = { workspace = true, features = ["full"] }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-core = { workspace = true }
+tracing-subscriber = { workspace = true }
+path-clean = { workspace = true }

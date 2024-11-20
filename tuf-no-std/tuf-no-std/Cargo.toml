@@ -1,0 +1,102 @@
+[package]
+name = "tuf-no-std"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+default = [
+    "der",
+    "sign",
+    "rsa",
+    "ecdsa",
+    "ed25519",
+    "composite",
+    "rand",
+    "async",
+]
+memory-transport = []
+rand = ["tuf-no-std-common/rand"]
+async = ["tuf-no-std-common/async"]
+der = ["dep:tuf-no-std-der"]
+sign = [
+    "tuf-no-std-common/sign",
+    "tuf-no-std-der/sign",
+]
+verify = [
+    "tuf-no-std-common/verify",
+    "tuf-no-std-der/verify",
+]
+rsa = [
+    "tuf-no-std-common/rsa",
+    "tuf-no-std-der/rsa",
+]
+ecdsa = [
+    "dep:p256",
+    "tuf-no-std-common/ecdsa",
+    "tuf-no-std-der/ecdsa",
+]
+ed25519 = [
+    "dep:ed25519",
+    "dep:ed25519-dalek",
+    "tuf-no-std-common/ed25519",
+    "tuf-no-std-der/ed25519",
+]
+dilithium3 = [
+    "tuf-no-std-common/dilithium3",
+    "tuf-no-std-der/dilithium3",
+]
+composite = [
+    "tuf-no-std-common/composite",
+    "tuf-no-std-der/composite",
+]
+
+
+[dependencies]
+tuf-no-std-common = { path = "../tuf-no-std-common" }
+tuf-no-std-der = { path = "../tuf-no-std-der", optional = true }
+
+
+serde = { workspace = true, features = ["derive"] }
+heapless = { workspace = true }
+
+#time = { version = "0.3", default-features = false, features = [
+#    "serde",
+#    "parsing",
+#] }
+# semver = { version = "1.0", default-features = false, features = ["serde"] }
+
+serde-json-core = { workspace = true }
+anyhow = { workspace = true, features = [] }
+
+either = { workspace = true }
+signature = { workspace = true, features = [] }
+p256 = { workspace = true, features = ["ecdsa", "arithmetic"], optional = true }
+ed25519 = { workspace = true, optional = true }
+ed25519-dalek = { workspace = true, features = ["pkcs8"], optional = true }
+
+pem-rfc7468 = { workspace = true, features = [] }
+hex = { workspace = true, features = [] }
+sha2 = { workspace = true, features = [] }
+
+spki = { workspace = true, features = ["fingerprint"] }
+const-oid = { workspace = true, features = ["db"] }
+der = { workspace = true, features = ["oid", "derive"] }
+zeroize = { workspace = true, features = [] }
+hash32 = { workspace = true }
+
+
+[dev-dependencies]
+serde_json = { workspace = true }
+postcard = { workspace = true }
+olpc-cjson = { workspace = true }
+rand_core = { workspace = true, features = ["getrandom"] }
+p256 = { workspace = true, features = ["ecdsa", "arithmetic", "pem"] }
+hex-literal = { workspace = true }
+anyhow = { workspace = true }
+ring = { workspace = true }
+untrusted = { workspace = true }
+tough = { workspace = true }
+rand = { workspace = true }
+ed25519-dalek = { workspace = true, features = ["rand_core", "alloc", "pkcs8"] }
+tokio = { workspace = true, features = ["full"] }

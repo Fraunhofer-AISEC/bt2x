@@ -1,0 +1,23 @@
+[package]
+name = "tuf-no-std-cli"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tuf-no-std = { path = "../tuf-no-std", default-features = false, features = [
+    "der",
+    "verify",
+    "ecdsa",
+    "rand",
+    "async",
+] }
+clap = { workspace = true, features = ["derive"] }
+tuf-no-std-der = { path = "../tuf-no-std-der" }
+pem = { workspace = true }
+der = { workspace = true }
+anyhow = { workspace = true, default-features = true }
+serde = { version = "1.0.171", features = ["derive"] }
+serde_yaml = { version = "0.9.33" }

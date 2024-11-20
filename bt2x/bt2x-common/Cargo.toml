@@ -1,0 +1,59 @@
+[package]
+name = "bt2x-common"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+default = ["bt", "oci"]
+oci = ["dep:oci-distribution"]
+# sbom = ["dep:cyclonedx-bom", "dep:rustsec", "dep:cargo-audit"]
+bt = ["dep:sigstore", "dep:url", "dep:oci-distribution"]
+
+[dependencies]
+# bt
+sigstore = { workspace = true, optional = true }
+sha2 = { workspace = true, features = ["oid"] }
+# oci
+oci-distribution = { workspace = true, features = [
+    "rustls-tls",
+], optional = true }
+# sbom/vulnerability scanning related
+cyclonedx-bom = { workspace = true, optional = true }
+rustsec = { workspace = true, optional = true }
+cargo-audit = { workspace = true, optional = true }
+
+# misc
+url = { workspace = true, optional = true }
+tracing = { workspace = true }
+async-trait = { workspace = true }
+typed-builder = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_with = { workspace = true, features = ["base64", "hex", "json"] }
+serde_json = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+olpc-cjson = { workspace = true }
+x509-cert = { workspace = true, features = ["pem"] }
+spki = { workspace = true, features = ["fingerprint"] }
+p256 = { workspace = true, features = ["pem", "ecdsa"] }
+anyhow = { workspace = true }
+digest = { workspace = true }
+itertools = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { workspace = true }
+sct = { workspace = true }
+tough = { workspace = true }
+futures = { workspace = true }
+tuf-no-std = { path = "../../tuf-no-std/tuf-no-std", default-features = false, features = [
+    "der",
+    "verify",
+    "ecdsa",
+    "async",
+] }
+chrono = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true }
+hex-literal = { workspace = true }
+serde_yaml = { workspace = true }

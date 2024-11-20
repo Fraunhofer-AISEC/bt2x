@@ -1,0 +1,17 @@
+references:
+  - tag: container-registry:1338/bt2x/pi-pico:bin
+    subjects:
+      - email: add@github-email.here
+        issuer: http://dex-idp:8888/
+sigstore_config:
+  key_config:
+    !keys
+      rekor_key: "/tuf-repo/targets/rekor.pub"
+      fulcio_cert: "/tuf-repo/targets/fulcio.crt.pem"
+      ctlog_key: "/tuf-repo/targets/ctlog.pub"
+  urls:
+    rekor: http://rekor:3000
+    fulcio: http://fulcio:5555
+    oidc_issuer: http://dex-idp:8888/
+monitors:
+  - http://bt2x-monitor-1:3132

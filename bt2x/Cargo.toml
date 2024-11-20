@@ -1,0 +1,76 @@
+[workspace]
+resolver = "2"
+members = [
+    "bt2x-common",
+    "bt2x-server",
+    "bt2x-embedded",
+    "bt2x-cli",
+    "bt2x-flasher",
+    "bt2x-monitor",
+    "bt2x-ota",
+    "bt2x-ota-common",
+]
+
+[workspace.dependencies]
+anyhow = "1.0"
+async-trait = "0.1"
+axum = "0.7.5"
+base64 = { version = "0.22.1", default-features = false }
+base64ct = { version = "1.6.0", default-features = false }
+bitfield = { version = "0.15.0", default-features = false }
+cargo-audit = "0.20.0"
+clap = "4.2"
+crossbeam = "0.8.2"
+cyclonedx-bom = "0.5.0"
+defmt = { version = "0.3.5", default-features = false }
+der = { version = "0.7", default-features = false }
+dhat = "0.3.2"
+digest = "0.10.6"
+ecdsa = { version = "0.16.1", default-features = false }
+embedded-io-async = { version = "0.6", default-features = false }
+futures = "0.3.30"
+hex = { version = "0.4.3", default-features = false }
+hex-literal = "0.4.1"
+humantime = "2.1.0"
+itertools = "0.12.1"
+oci-distribution = { version = "0.10.0", default-features = false }
+olpc-cjson = "0.1"
+p256 = { version = "0.13.0", default-features = false }
+pem-rfc7468 = { version = "0.7.0", default-features = false }
+pipe = "0.4.0"
+pkcs8 = { version = "0.10.1", default-features = false }
+postcard = "1.0"
+probe-rs = "0.23.0"
+reqwest = { version = "0.12.4", features = ["json", "rustls-tls"] }
+rustsec = "0.29.2"
+sct = "0.7.0"
+serde = { version = "1.0", default-features = false }
+serde-json-core = "0.5.0"
+serde_json = { version = "1.0", default-features = false }
+serde_with = "3.8.1"
+serde_yaml = "0.9"
+sha2 = { version = "0.10.6", default-features = false }
+signature = "2.0.0"
+sigstore = { git = "https://github.com/vembacher/sigstore-rs", rev = "58d3b5f1285496ef2709e50dd6e75d507700d534" }
+spki = { version = "0.7.0", default-features = false }
+thiserror = "1.0"
+tokio = "1"
+tough = "0.17"
+tracing = "0.1"
+tracing-core = "0.1"
+tracing-subscriber = "0.3"
+typed-builder = "0.18.2"
+url = "2.3.1"
+uuid = "1.3.3"
+x509-cert = { version = "0.2.1", default-features = false }
+log = "0.4"
+testcontainers = "0.15"
+testcontainers-modules = "0.3"
+tempfile = "3.10.1"
+embassy-net = { git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180" }
+embassy-time = { git = "https://github.com/embassy-rs/embassy", rev = "a2acb3e3dceddb4752f8fb1c17aa65e1959a2180" }
+embedded-storage = "0.3"
+path-clean = "1.0"
+chrono = { version = "0.4" }
+rustls-pki-types = "1.8.0"
+rustls-pemfile = "2.1.3"
